@@ -7,14 +7,14 @@ using Csla;
 namespace BusinessLibrary
 {
   [Serializable]
-  [Csla.Server.ObjectFactory("DataAccess.OrderFactory, DataAccess")]
+  [Csla.Server.ObjectFactory("BusinessLibrary.ObjectFactories.OrderFactory, BusinessLibrary")]
   public class Order : BusinessBase<Order>
   {
     public static PropertyInfo<int> IdProperty = RegisterProperty(new PropertyInfo<int>("Id", "Id"));
     public int Id
     {
       get { return GetProperty(IdProperty); }
-      private set { SetProperty(IdProperty, value); }
+        protected set { SetProperty(IdProperty, value); }
     }
 
     public static PropertyInfo<string> CustomerNameProperty = RegisterProperty(new PropertyInfo<string>("CustomerName", "Customer name"));
@@ -57,6 +57,7 @@ namespace BusinessLibrary
       {
           DataPortal.Delete(new SingleCriteria<Order, int>(id));
       }
+ 
  
   }
 }

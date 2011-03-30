@@ -74,16 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LineItemFactory.cs" />
-    <Compile Include="Mappings\Order2Map.cs" />
-    <Compile Include="OrderFactory.cs" />
+    <Compile Include="IOrderRepository.cs" />
+    <Compile Include="Mappings\OrderMap.cs" />
+    <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.csproj">
-      <Project>{2D2E0AC6-863C-4C52-88D4-B9CC79D5845C}</Project>
-      <Name>BusinessLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -101,6 +95,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{BE9D44B0-B395-4B43-B355-2BE4E707E9F6}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -60,6 +60,7 @@
     <Reference Include="FluentNHibernate">
       <HintPath>..\lib\FluentNHibernate.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate, Version=3.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -74,16 +75,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IOrderRepository.cs" />
-    <Compile Include="Translater.cs" />
     <Compile Include="IoC.cs" />
-    <Compile Include="Models\OrderModel.cs" />
-    <Compile Include="Order2.cs" />
+    <Compile Include="ObjectFactories\LineItemFactory.cs" />
+    <Compile Include="TweekedCsla\Order.cs" />
     <Compile Include="LineItem.cs" />
     <Compile Include="LineItems.cs" />
     <Compile Include="Order.cs" />
-    <Compile Include="OrderRepository.cs" />
+    <Compile Include="ObjectFactories\OrderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Translater.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -101,6 +101,16 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{BE9D44B0-B395-4B43-B355-2BE4E707E9F6}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{018E510E-B943-447B-A60C-79165B438FA0}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

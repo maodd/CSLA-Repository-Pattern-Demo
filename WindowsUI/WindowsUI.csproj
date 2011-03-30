@@ -54,6 +54,9 @@
     <Reference Include="Csla">
       <HintPath>..\lib\Csla.dll</HintPath>
     </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -94,6 +97,7 @@
     </Compile>
     <None Include="App.config" />
     <None Include="Properties\DataSources\BusinessLibrary.Order.datasource" />
+    <None Include="Properties\DataSources\BusinessLibrary.Order2.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

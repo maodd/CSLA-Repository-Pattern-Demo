@@ -28,158 +28,167 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.components = new System.ComponentModel.Container();
-      System.Windows.Forms.Label customerNameLabel;
-      System.Windows.Forms.Label idLabel;
-      this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.customerNameTextBox = new System.Windows.Forms.TextBox();
-      this.idTextBox = new System.Windows.Forms.TextBox();
-      this.lineItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-      this.lineItemsDataGridView = new System.Windows.Forms.DataGridView();
-      this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-      this.cslaActionExtender1 = new Csla.Windows.CslaActionExtender(this.components);
-      this.SaveButton = new System.Windows.Forms.Button();
-      this.CancelButton = new System.Windows.Forms.Button();
-      this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-      this.bindingSourceRefresh1 = new Csla.Windows.BindingSourceRefresh(this.components);
-      customerNameLabel = new System.Windows.Forms.Label();
-      idLabel = new System.Windows.Forms.Label();
-      ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.lineItemsBindingSource)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.lineItemsDataGridView)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-      ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh1)).BeginInit();
-      this.SuspendLayout();
-      // 
-      // customerNameLabel
-      // 
-      customerNameLabel.AutoSize = true;
-      customerNameLabel.Location = new System.Drawing.Point(17, 57);
-      customerNameLabel.Name = "customerNameLabel";
-      customerNameLabel.Size = new System.Drawing.Size(85, 13);
-      customerNameLabel.TabIndex = 1;
-      customerNameLabel.Text = "Customer Name:";
-      // 
-      // idLabel
-      // 
-      idLabel.AutoSize = true;
-      idLabel.Location = new System.Drawing.Point(17, 31);
-      idLabel.Name = "idLabel";
-      idLabel.Size = new System.Drawing.Size(19, 13);
-      idLabel.TabIndex = 3;
-      idLabel.Text = "Id:";
-      // 
-      // orderBindingSource
-      // 
-      this.orderBindingSource.DataSource = typeof(BusinessLibrary.Order);
-      this.bindingSourceRefresh1.SetReadValuesOnChange(this.orderBindingSource, true);
-      // 
-      // customerNameTextBox
-      // 
-      this.customerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "CustomerName", true));
-      this.customerNameTextBox.Location = new System.Drawing.Point(108, 54);
-      this.customerNameTextBox.Name = "customerNameTextBox";
-      this.customerNameTextBox.Size = new System.Drawing.Size(100, 20);
-      this.customerNameTextBox.TabIndex = 2;
-      // 
-      // idTextBox
-      // 
-      this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "Id", true));
-      this.idTextBox.Location = new System.Drawing.Point(108, 28);
-      this.idTextBox.Name = "idTextBox";
-      this.idTextBox.ReadOnly = true;
-      this.idTextBox.Size = new System.Drawing.Size(100, 20);
-      this.idTextBox.TabIndex = 4;
-      // 
-      // lineItemsBindingSource
-      // 
-      this.lineItemsBindingSource.DataMember = "LineItems";
-      this.lineItemsBindingSource.DataSource = this.orderBindingSource;
-      this.bindingSourceRefresh1.SetReadValuesOnChange(this.lineItemsBindingSource, false);
-      // 
-      // lineItemsDataGridView
-      // 
-      this.lineItemsDataGridView.AutoGenerateColumns = false;
-      this.lineItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.lineItemsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+        this.components = new System.ComponentModel.Container();
+        System.Windows.Forms.Label customerNameLabel;
+        System.Windows.Forms.Label idLabel;
+        this.customerNameTextBox = new System.Windows.Forms.TextBox();
+        this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+        this.idTextBox = new System.Windows.Forms.TextBox();
+        this.lineItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+        this.lineItemsDataGridView = new System.Windows.Forms.DataGridView();
+        this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+        this.cslaActionExtender1 = new Csla.Windows.CslaActionExtender(this.components);
+        this.SaveButton = new System.Windows.Forms.Button();
+        this.CancelButton = new System.Windows.Forms.Button();
+        this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+        this.bindingSourceRefresh1 = new Csla.Windows.BindingSourceRefresh(this.components);
+        customerNameLabel = new System.Windows.Forms.Label();
+        idLabel = new System.Windows.Forms.Label();
+        ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.lineItemsBindingSource)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.lineItemsDataGridView)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh1)).BeginInit();
+        this.SuspendLayout();
+        // 
+        // customerNameLabel
+        // 
+        customerNameLabel.AutoSize = true;
+        customerNameLabel.Location = new System.Drawing.Point(26, 88);
+        customerNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+        customerNameLabel.Name = "customerNameLabel";
+        customerNameLabel.Size = new System.Drawing.Size(128, 20);
+        customerNameLabel.TabIndex = 1;
+        customerNameLabel.Text = "Customer Name:";
+        // 
+        // idLabel
+        // 
+        idLabel.AutoSize = true;
+        idLabel.Location = new System.Drawing.Point(26, 48);
+        idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+        idLabel.Name = "idLabel";
+        idLabel.Size = new System.Drawing.Size(27, 20);
+        idLabel.TabIndex = 3;
+        idLabel.Text = "Id:";
+        // 
+        // customerNameTextBox
+        // 
+        this.customerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "CustomerName", true));
+        this.customerNameTextBox.Location = new System.Drawing.Point(162, 83);
+        this.customerNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        this.customerNameTextBox.Name = "customerNameTextBox";
+        this.customerNameTextBox.Size = new System.Drawing.Size(148, 26);
+        this.customerNameTextBox.TabIndex = 2;
+        // 
+        // orderBindingSource
+        // 
+        this.orderBindingSource.DataSource = typeof(BusinessLibrary.TweekedCsla.Order);
+        this.bindingSourceRefresh1.SetReadValuesOnChange(this.orderBindingSource, true);
+        // 
+        // idTextBox
+        // 
+        this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.orderBindingSource, "Id", true));
+        this.idTextBox.Location = new System.Drawing.Point(162, 43);
+        this.idTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        this.idTextBox.Name = "idTextBox";
+        this.idTextBox.ReadOnly = true;
+        this.idTextBox.Size = new System.Drawing.Size(148, 26);
+        this.idTextBox.TabIndex = 4;
+        // 
+        // lineItemsBindingSource
+        // 
+        this.lineItemsBindingSource.DataMember = "LineItems";
+        this.lineItemsBindingSource.DataSource = this.orderBindingSource;
+        this.bindingSourceRefresh1.SetReadValuesOnChange(this.lineItemsBindingSource, false);
+  
+        // 
+        // lineItemsDataGridView
+        // 
+        this.lineItemsDataGridView.AutoGenerateColumns = false;
+        this.lineItemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.lineItemsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-      this.lineItemsDataGridView.DataSource = this.lineItemsBindingSource;
-      this.lineItemsDataGridView.Location = new System.Drawing.Point(20, 89);
-      this.lineItemsDataGridView.Name = "lineItemsDataGridView";
-      this.lineItemsDataGridView.Size = new System.Drawing.Size(300, 220);
-      this.lineItemsDataGridView.TabIndex = 5;
-      // 
-      // dataGridViewTextBoxColumn1
-      // 
-      this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-      this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-      this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-      // 
-      // dataGridViewTextBoxColumn2
-      // 
-      this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-      this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-      this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-      // 
-      // cslaActionExtender1
-      // 
-      this.cslaActionExtender1.DataSource = this.orderBindingSource;
-      // 
-      // SaveButton
-      // 
-      this.cslaActionExtender1.SetActionType(this.SaveButton, Csla.Windows.CslaFormAction.Save);
-      this.cslaActionExtender1.SetDisableWhenClean(this.SaveButton, false);
-      this.SaveButton.Location = new System.Drawing.Point(360, 28);
-      this.SaveButton.Name = "SaveButton";
-      this.SaveButton.Size = new System.Drawing.Size(75, 23);
-      this.SaveButton.TabIndex = 6;
-      this.SaveButton.Text = "Save";
-      this.SaveButton.UseVisualStyleBackColor = true;
-      // 
-      // CancelButton
-      // 
-      this.cslaActionExtender1.SetActionType(this.CancelButton, Csla.Windows.CslaFormAction.Cancel);
-      this.cslaActionExtender1.SetDisableWhenClean(this.CancelButton, false);
-      this.CancelButton.Location = new System.Drawing.Point(360, 57);
-      this.CancelButton.Name = "CancelButton";
-      this.CancelButton.Size = new System.Drawing.Size(75, 23);
-      this.CancelButton.TabIndex = 7;
-      this.CancelButton.Text = "Cancel";
-      this.CancelButton.UseVisualStyleBackColor = true;
-      // 
-      // errorProvider1
-      // 
-      this.errorProvider1.ContainerControl = this;
-      this.errorProvider1.DataSource = this.orderBindingSource;
-      // 
-      // bindingSourceRefresh1
-      // 
-      this.bindingSourceRefresh1.Host = this;
-      // 
-      // Form1
-      // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(697, 464);
-      this.Controls.Add(this.CancelButton);
-      this.Controls.Add(this.SaveButton);
-      this.Controls.Add(this.lineItemsDataGridView);
-      this.Controls.Add(customerNameLabel);
-      this.Controls.Add(this.customerNameTextBox);
-      this.Controls.Add(idLabel);
-      this.Controls.Add(this.idTextBox);
-      this.Name = "Form1";
-      this.Text = "Order entry";
-      this.Load += new System.EventHandler(this.Form1_Load);
-      ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.lineItemsBindingSource)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.lineItemsDataGridView)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-      ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh1)).EndInit();
-      this.ResumeLayout(false);
-      this.PerformLayout();
+        this.lineItemsDataGridView.DataSource = this.lineItemsBindingSource;
+        this.lineItemsDataGridView.Location = new System.Drawing.Point(30, 137);
+        this.lineItemsDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        this.lineItemsDataGridView.Name = "lineItemsDataGridView";
+        this.lineItemsDataGridView.RowTemplate.Height = 28;
+        this.lineItemsDataGridView.Size = new System.Drawing.Size(450, 338);
+        this.lineItemsDataGridView.TabIndex = 5;
+        // 
+        // dataGridViewTextBoxColumn1
+        // 
+        this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+        this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+        this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+        // 
+        // dataGridViewTextBoxColumn2
+        // 
+        this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+        this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+        this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+        // 
+        // cslaActionExtender1
+        // 
+        this.cslaActionExtender1.DataSource = this.orderBindingSource;
+        // 
+        // SaveButton
+        // 
+        this.cslaActionExtender1.SetActionType(this.SaveButton, Csla.Windows.CslaFormAction.Save);
+        this.SaveButton.Location = new System.Drawing.Point(540, 43);
+        this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        this.SaveButton.Name = "SaveButton";
+        this.SaveButton.Size = new System.Drawing.Size(112, 35);
+        this.SaveButton.TabIndex = 6;
+        this.SaveButton.Text = "Save";
+        this.SaveButton.UseVisualStyleBackColor = true;
+        this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+        // 
+        // CancelButton
+        // 
+        this.cslaActionExtender1.SetActionType(this.CancelButton, Csla.Windows.CslaFormAction.Cancel);
+        this.CancelButton.Location = new System.Drawing.Point(540, 88);
+        this.CancelButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        this.CancelButton.Name = "CancelButton";
+        this.CancelButton.Size = new System.Drawing.Size(112, 35);
+        this.CancelButton.TabIndex = 7;
+        this.CancelButton.Text = "Cancel";
+        this.CancelButton.UseVisualStyleBackColor = true;
+        // 
+        // errorProvider1
+        // 
+        this.errorProvider1.ContainerControl = this;
+        this.errorProvider1.DataSource = this.orderBindingSource;
+        // 
+        // bindingSourceRefresh1
+        // 
+        this.bindingSourceRefresh1.Host = this;
+        // 
+        // Form1
+        // 
+        this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.ClientSize = new System.Drawing.Size(1046, 714);
+        this.Controls.Add(this.CancelButton);
+        this.Controls.Add(this.SaveButton);
+        this.Controls.Add(this.lineItemsDataGridView);
+        this.Controls.Add(customerNameLabel);
+        this.Controls.Add(this.customerNameTextBox);
+        this.Controls.Add(idLabel);
+        this.Controls.Add(this.idTextBox);
+        this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+        this.Name = "Form1";
+        this.Text = "Order entry";
+        this.Load += new System.EventHandler(this.Form1_Load);
+        ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.lineItemsBindingSource)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.lineItemsDataGridView)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+        ((System.ComponentModel.ISupportInitialize)(this.bindingSourceRefresh1)).EndInit();
+        this.ResumeLayout(false);
+        this.PerformLayout();
 
     }
 

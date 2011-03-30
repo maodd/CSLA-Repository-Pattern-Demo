@@ -61,16 +61,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CloneTests.cs" />
-    <Compile Include="OrderMappingTest.cs" />
-    <Compile Include="InMemoryDatabaseTestFixture.cs" />
-    <Compile Include="CslaRepositoryPattenDemo.cs" />
+    <Compile Include="IntegrationTests\OrderRepositroySpecs.cs" />
+    <Compile Include="UnitTests\CloneTests.cs" />
+    <Compile Include="UnitTests\OrderMappingTest.cs" />
+    <Compile Include="UnitTests\InMemoryDatabaseTestFixture.cs" />
+    <Compile Include="UnitTests\CslaRepositoryPattenDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLibrary\BusinessLibrary.csproj">
       <Project>{2D2E0AC6-863C-4C52-88D4-B9CC79D5845C}</Project>
       <Name>BusinessLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{BE9D44B0-B395-4B43-B355-2BE4E707E9F6}</Project>
+      <Name>Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{018E510E-B943-447B-A60C-79165B438FA0}</Project>

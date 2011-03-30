@@ -7,7 +7,7 @@ using Csla;
 namespace BusinessLibrary
 {
   [Serializable]
-  [Csla.Server.ObjectFactory("DataAccess.LineItemFactory, DataAccess")]
+  [Csla.Server.ObjectFactory("BusinessLibrary.ObjectFactories.LineItemFactory, BusinessLibrary")]
   public class LineItem : BusinessBase<LineItem>
   {
     private static PropertyInfo<int> IdProperty = RegisterProperty(new PropertyInfo<int>("Id", "Id"));
