@@ -54,6 +54,12 @@
     <Reference Include="Csla">
       <HintPath>..\lib\Csla.dll</HintPath>
     </Reference>
+    <Reference Include="FluentNHibernate">
+      <HintPath>..\lib\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\lib\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -69,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LineItemFactory.cs" />
+    <Compile Include="Mappings\Order2Map.cs" />
     <Compile Include="OrderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

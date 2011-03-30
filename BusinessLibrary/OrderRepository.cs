@@ -4,18 +4,18 @@ namespace BusinessLibrary
 {
     public class OrderRepository : IOrderRepository
     {
-        public Order2 FetchById(int id)
+        public Order FetchById(int id)
         {
             Console.WriteLine("Fetching in repository");
-            return (Order2)Activator.CreateInstance(typeof(Order2), true); 
+            return (Order)Activator.CreateInstance(typeof(Order), true); 
         }
 
-        public void SaveOrUpdate(Order2 order)
+        public void SaveOrUpdate(Order order)
         {
             Console.WriteLine("Saving in repository");
         }
 
-        public void Delete(Order2 id)
+        public void Delete(Order id)
         {
             Console.WriteLine("Deleteing in repository");
         }        

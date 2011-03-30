@@ -8,12 +8,12 @@
   </SettingsComponent>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="4" />
-      <Item value="void" priority="2" />
-      <Item value="new" priority="5" />
+      <Item value="public" priority="7" />
+      <Item value="void" priority="3" />
+      <Item value="new" priority="7" />
       <Item value="OrderFactorySpecs`0" priority="0" />
       <Item value="SingleCriteria&lt;Order,int&gt;" priority="0" />
-      <Item value="Assert`0" priority="1" />
+      <Item value="Assert`0" priority="2" />
       <Item value="order" priority="5" />
       <Item value="Order`0" priority="5" />
       <Item value="static" priority="3" />
@@ -21,11 +21,11 @@
       <Item value="DataPortal`0" priority="1" />
       <Item value="cw" priority="5" />
       <Item value="criteria" priority="1" />
-      <Item value="class" priority="0" />
+      <Item value="class" priority="1" />
       <Item value="object" priority="0" />
-      <Item value="int" priority="1" />
-      <Item value="ctor" priority="0" />
-      <Item value="Order2`0" priority="2" />
+      <Item value="int" priority="3" />
+      <Item value="ctor" priority="1" />
+      <Item value="Order2`0" priority="4" />
       <Item value="orderRepository" priority="0" />
       <Item value="IOrderRepository`0" priority="1" />
       <Item value="IoC`0" priority="0" />
@@ -33,16 +33,32 @@
       <Item value="null" priority="0" />
       <Item value="_orderRepository" priority="0" />
       <Item value="Order" priority="0" />
+      <Item value="Id`1" priority="1" />
+      <Item value="Table`0" priority="0" />
+      <Item value="x" priority="2" />
+      <Item value="Map`0" priority="1" />
+      <Item value="protected" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="prop" priority="2" />
+      <Item value="IDataPortalResult`0" priority="0" />
+      <Item value="virtual" priority="0" />
+      <Item value="string" priority="0" />
+      <Item value="TestFixtureAttribute`0" priority="0" />
+      <Item value="AutoMapper" priority="1" />
+      <Item value="Mapper`0" priority="1" />
+      <Item value="OrderModel`0" priority="0" />
+      <Item value="result" priority="0" />
+      <Item value="lock" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:DataAccess.OrderFactory">
       <Item value="Fetch`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
-      <Item value="IsNotNull`0" priority="1" />
+      <Item value="IsNotNull`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:BusinessLibrary.Order">
       <Item value="Save`0" priority="1" />
-      <Item value="CustomerName" priority="1" />
+      <Item value="CustomerName" priority="2" />
       <Item value="Delete`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@BusinessLibrary.Order">
@@ -59,58 +75,79 @@
     <ItemStatistics item="Qualified:BusinessLibrary.IOrderRepository">
       <Item value="FetchById`0" priority="0" />
     </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Mapping.IdentityPart">
+      <Item value="GeneratedBy" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Mapping.IdentityGenerationStrategyBuilder`1">
+      <Item value="Identity`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:BusinessLibrary.Order2">
+      <Item value="CustomerName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Csla.Core.ObjectCloner">
+      <Item value="Clone`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AutoMapper.Mapper">
+      <Item value="Map`0" priority="1" />
+      <Item value="CreateMap`0" priority="0" />
+    </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="FC859308-83C8-4DEF-A7BC-D497413C4F91/f:App.config" caret="0" fromTop="0" />
-      <File id="73DA7B36-26F0-4269-A363-C0615244CA75/f:WcfPortal.svc" caret="0" fromTop="0" />
-      <File id="FC859308-83C8-4DEF-A7BC-D497413C4F91/f:Program.cs" caret="0" fromTop="0" />
       <File id="FC859308-83C8-4DEF-A7BC-D497413C4F91/f:Form1.Designer.cs" caret="8675" fromTop="125" />
       <File id="FC859308-83C8-4DEF-A7BC-D497413C4F91/d:Properties/d:DataSources/f:BusinessLibrary.Order.datasource" caret="0" fromTop="0" />
       <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:LineItem.cs" caret="0" fromTop="0" />
       <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:LineItems.cs" caret="0" fromTop="0" />
       <File id="018E510E-B943-447B-A60C-79165B438FA0/f:LineItemFactory.cs" caret="0" fromTop="0" />
       <File id="d:Miscellaneous Files/f:ObjectFactory.cs/l:C!?lib?cslacs?Csla?Server?ObjectFactory.cs" caret="305" fromTop="0" />
-      <File id="d:Miscellaneous Files/f:BusinessBase.cs/l:C!?lib?cslacs?Csla?Core?BusinessBase.cs" caret="37907" fromTop="0" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="551" fromTop="12" />
       <File id="d:Miscellaneous Files/f:DataPortal.cs/l:C!?lib?cslacs?Csla?DataPortal.cs" caret="326" fromTop="15" />
       <File id="018E510E-B943-447B-A60C-79165B438FA0/f:OrderFactory.cs" caret="362" fromTop="10" />
       <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:OrderRepository.cs" caret="289" fromTop="9" />
       <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:IoC.cs" caret="308" fromTop="14" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="2299" fromTop="14" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="1862" fromTop="13" />
+      <File id="d:Miscellaneous Files/f:BusinessBase.cs/l:C!?lib?cslacs?Csla?Core?BusinessBase.cs" caret="46973" fromTop="12" />
+      <File id="FC859308-83C8-4DEF-A7BC-D497413C4F91/f:App.config" caret="0" fromTop="0" />
+      <File id="73DA7B36-26F0-4269-A363-C0615244CA75/f:WcfPortal.svc" caret="0" fromTop="0" />
+      <File id="73DA7B36-26F0-4269-A363-C0615244CA75/f:Web.config" caret="0" fromTop="0" />
+      <File id="FC859308-83C8-4DEF-A7BC-D497413C4F91/f:Program.cs" caret="152" fromTop="8" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:InMemoryDatabaseTestFixture.cs" caret="289" fromTop="2" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:OrderMappingTest.cs" caret="204" fromTop="10" />
+      <File id="018E510E-B943-447B-A60C-79165B438FA0/d:Mappings/f:Order2Map.cs" caret="225" fromTop="9" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="1191" fromTop="7" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/d:Models/f:OrderModel.cs" caret="149" fromTop="7" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="270" fromTop="10" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="612" fromTop="10" />
     </RecentFiles>
     <RecentEdits>
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="694" fromTop="12" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="1170" fromTop="24" />
-      <File id="018E510E-B943-447B-A60C-79165B438FA0/f:OrderFactory.cs" caret="1598" fromTop="13" />
-      <File id="018E510E-B943-447B-A60C-79165B438FA0/f:OrderFactory.cs" caret="1004" fromTop="6" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="1653" fromTop="13" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="1731" fromTop="18" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="956" fromTop="8" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="1333" fromTop="20" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="211" fromTop="2" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="2497" fromTop="43" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="1429" fromTop="6" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="830" fromTop="20" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="447" fromTop="8" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="259" fromTop="5" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:IoC.cs" caret="133" fromTop="8" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:IoC.cs" caret="240" fromTop="13" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:IoC.cs" caret="308" fromTop="14" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="259" fromTop="9" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="178" fromTop="5" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="485" fromTop="9" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="390" fromTop="4" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="1559" fromTop="12" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="1797" fromTop="20" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="1950" fromTop="12" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="987" fromTop="22" />
-      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="714" fromTop="12" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="1964" fromTop="12" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="2202" fromTop="20" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="2355" fromTop="12" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="1052" fromTop="22" />
       <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:OrderRepository.cs" caret="87" fromTop="4" />
       <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:OrderRepository.cs" caret="537" fromTop="11" />
-      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="2226" fromTop="18" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="2631" fromTop="18" />
       <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:OrderRepository.cs" caret="289" fromTop="9" />
+      <File id="018E510E-B943-447B-A60C-79165B438FA0/d:Mappings/f:Order2Map.cs" caret="397" fromTop="17" />
+      <File id="018E510E-B943-447B-A60C-79165B438FA0/d:Mappings/f:Order2Map.cs" caret="283" fromTop="12" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:InMemoryDatabaseTestFixture.cs" caret="1487" fromTop="40" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:InMemoryDatabaseTestFixture.cs" caret="748" fromTop="13" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:InMemoryDatabaseTestFixture.cs" caret="968" fromTop="3" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:InMemoryDatabaseTestFixture.cs" caret="315" fromTop="5" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:OrderMappingTest.cs" caret="962" fromTop="39" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:OrderMappingTest.cs" caret="441" fromTop="18" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:OrderMappingTest.cs" caret="610" fromTop="12" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:OrderMappingTest.cs" caret="893" fromTop="14" />
+      <File id="018E510E-B943-447B-A60C-79165B438FA0/d:Mappings/f:Order2Map.cs" caret="258" fromTop="11" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:OrderMappingTest.cs" caret="347" fromTop="14" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="1797" fromTop="11" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="677" fromTop="8" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="425" fromTop="6" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="386" fromTop="4" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="663" fromTop="11" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order.cs" caret="962" fromTop="18" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="272" fromTop="4" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/d:Models/f:OrderModel.cs" caret="264" fromTop="10" />
+      <File id="2D2E0AC6-863C-4C52-88D4-B9CC79D5845C/f:Order2.cs" caret="203" fromTop="7" />
+      <File id="ADC8B65F-A456-4FCF-A5B7-4EEF4409A8CB/f:CslaRepositoryPattenDemo.cs" caret="612" fromTop="10" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

@@ -57,9 +57,6 @@ namespace BusinessLibrary
       {
           DataPortal.Delete(new SingleCriteria<Order, int>(id));
       }
-    public override Order Save()
-    {
-      return base.Save();
-    }
+ 
   }
 }
