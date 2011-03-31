@@ -77,13 +77,14 @@
   <ItemGroup>
     <Compile Include="IoC.cs" />
     <Compile Include="ObjectFactories\LineItemFactory.cs" />
+    <Compile Include="TweekedCsla\LineItem.cs" />
     <Compile Include="TweekedCsla\Order.cs" />
     <Compile Include="LineItem.cs" />
     <Compile Include="LineItems.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="ObjectFactories\OrderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Translater.cs" />
+    <Compile Include="Translaters\Translater.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

@@ -32,7 +32,9 @@ namespace WindowsUI
     private void SaveButton_Click(object sender, EventArgs e)
     {
         var dataSource = this.orderBindingSource.DataSource;
-        ((BusinessLibrary.TweekedCsla.Order)dataSource).Save();
+
+        // Second time save fail, how to refresh datasource? or just close the form and reload it?
+        this.orderBindingSource.DataSource = ((BusinessLibrary.TweekedCsla.Order)dataSource).Save();
     }
 
    

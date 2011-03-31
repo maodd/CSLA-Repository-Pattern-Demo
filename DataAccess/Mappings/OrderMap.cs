@@ -16,7 +16,9 @@ namespace DataAccess.Mappings
             Id(x=>x.Id).GeneratedBy.Identity();
 
             Map(x => x.CustomerName);
-     
+
+
+            HasMany(x => x.LineItems).Access.Property().Cascade.All().Inverse().KeyColumn("Order_Id");
         }
     }
 }

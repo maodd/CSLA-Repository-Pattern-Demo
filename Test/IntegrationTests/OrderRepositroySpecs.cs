@@ -31,6 +31,28 @@ namespace Test
             var check = _systemUnderTest.FetchById(maxId);
 
             Assert.AreEqual(newName, check.CustomerName);
+        }    
+        
+        [Test]
+        public void should_insert_new_order_with_line_items()
+        {
+            
+            string newName = "A very funny customer " + new Random().Next(14345);
+
+
+            var newOrder = new OrderModel(){CustomerName = newName};
+
+            newOrder.AddLineItem(new LineItemModel() {Name = "line item 1"});
+
+            _systemUnderTest.SaveOrUpdate(newOrder);
+
+            _systemUnderTest.Session.Flush();
+            
+            int maxId = _systemUnderTest.MaxId();
+ 
+            var check = _systemUnderTest.FetchById(maxId);
+
+            Assert.AreEqual(newName, check.CustomerName);
         }
 
         [Test]

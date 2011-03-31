@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IOrderRepository.cs" />
+    <Compile Include="Mappings\LineItemMap.cs" />
     <Compile Include="Mappings\OrderMap.cs" />
     <Compile Include="OrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
