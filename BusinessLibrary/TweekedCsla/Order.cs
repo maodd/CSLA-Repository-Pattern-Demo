@@ -8,7 +8,7 @@ using DataAccess;
 namespace BusinessLibrary.TweekedCsla
 {
     /// <summary>
-    /// Wrapper class created for use tweeked OrderFactory2
+    /// Created for use tweeked OrderFactory2
     /// </summary>
     [Serializable]
     [Csla.Server.ObjectFactory("BusinessLibrary.ObjectFactories.OrderFactory2, BusinessLibrary")]
@@ -42,8 +42,6 @@ namespace BusinessLibrary.TweekedCsla
                     LoadProperty(LineItemsProperty, LineItems.NewList());
                 return GetProperty(LineItemsProperty);
             }
-            // Needed for automaper only
-            internal set { SetProperty(LineItemsProperty, value); }
         }
 
         protected override void AddBusinessRules()
@@ -67,7 +65,5 @@ namespace BusinessLibrary.TweekedCsla
             DataPortal.Delete(new SingleCriteria<Order, int>(id));
         }
 
-        
-        
     }
 }
