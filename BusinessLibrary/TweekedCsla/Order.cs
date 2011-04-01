@@ -8,7 +8,7 @@ using DataAccess;
 namespace BusinessLibrary.TweekedCsla
 {
     /// <summary>
-    /// Wrapper class created for inject IRepository and Translater/autoMapper into Csla Object
+    /// Wrapper class created for use tweeked OrderFactory2
     /// </summary>
     [Serializable]
     [Csla.Server.ObjectFactory("BusinessLibrary.ObjectFactories.OrderFactory2, BusinessLibrary")]
@@ -34,24 +34,16 @@ namespace BusinessLibrary.TweekedCsla
             set { SetProperty(CustomerNameProperty, value); }
         }
 
-        public BusinessLibrary.LineItems LineItems
+        public LineItems LineItems
         {
             get
             {
                 if (!FieldManager.FieldExists(LineItemsProperty))
-                    LoadProperty(LineItemsProperty, BusinessLibrary.LineItems.NewList());
+                    LoadProperty(LineItemsProperty, LineItems.NewList());
                 return GetProperty(LineItemsProperty);
             }
             // Needed for automaper only
             internal set { SetProperty(LineItemsProperty, value); }
-        }
-
-        /// <summary>
-        /// Ensure OrderRepository to get latest instance for each call especially for mocking
-        /// </summary>
-        public static IOrderRepository OrderRepository
-        {
-            get { return IoC.Get<IOrderRepository>(); }
         }
 
         protected override void AddBusinessRules()
@@ -59,20 +51,10 @@ namespace BusinessLibrary.TweekedCsla
             ValidationRules.AddRule(CommonRules.StringRequired, CustomerNameProperty);
         }
  
-
         [RunLocal]
         public static Order NewOrder()
         {
             return DataPortal.Create<Order>();
-        }
-
-        /// <summary>
-        /// Test purpose
-        /// </summary>
-        /// <returns></returns>
-        public static int MaxId()
-        {
-            return OrderRepository.MaxId();
         }
   
         public static Order FetchById(int id)
