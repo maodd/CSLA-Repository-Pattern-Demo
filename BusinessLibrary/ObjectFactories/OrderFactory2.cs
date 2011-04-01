@@ -75,12 +75,7 @@ namespace BusinessLibrary.ObjectFactories
             {
                 orderToSave = OrderRepository.FetchById(obj.Id);
 
-                // No reset in csla.LineItems
-                for (int i = orderToSave.LineItems.Count - 1; i >= 0; i--)
-                {
-                    orderToSave.LineItems.RemoveAt(i);
-                }
-                
+                orderToSave.LineItems.Clear();
             }
             else
             {
@@ -95,7 +90,10 @@ namespace BusinessLibrary.ObjectFactories
             {
                 orderToSave.AddLineItem(new LineItemModel
                                             {
-//                                                Id = lineItem.Id, // LineItem treat as ValueObject, delete/insert everytime
+//                                                Id = lineItem.Id, 
+// LineItem treat as ValueObject, delete/insert everytime, 
+// id will change after each save,
+// but who cares? name is the only thing important in order
                                                 Name = lineItem.Name,
                                                 Order = orderToSave
                                             });

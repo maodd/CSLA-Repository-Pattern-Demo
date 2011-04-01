@@ -2,7 +2,6 @@
 
 namespace Core.Models
 {
-  [Serializable]
     public class LineItemModel  
   {
       public virtual int Id { get; set; }
