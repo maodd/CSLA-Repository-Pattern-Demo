@@ -1,4 +1,7 @@
-Demo how to implement repository pattern in csla project. NHibernate and Automapp are used.
+Demo how to implement repository pattern in csla project. 
+
+NHibernate used in Csla.ObjectFactory.
+IoC.Inject in testing.
 
 Frank Mao
 

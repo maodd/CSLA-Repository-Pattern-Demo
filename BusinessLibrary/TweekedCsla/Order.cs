@@ -34,12 +34,12 @@ namespace BusinessLibrary.TweekedCsla
             set { SetProperty(CustomerNameProperty, value); }
         }
 
-        public LineItems LineItems
+        public BusinessLibrary.LineItems LineItems
         {
             get
             {
                 if (!FieldManager.FieldExists(LineItemsProperty))
-                    LoadProperty(LineItemsProperty, LineItems.NewList());
+                    LoadProperty(LineItemsProperty, BusinessLibrary.LineItems.NewList());
                 return GetProperty(LineItemsProperty);
             }
             // Needed for automaper only

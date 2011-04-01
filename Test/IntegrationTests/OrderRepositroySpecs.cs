@@ -64,6 +64,22 @@ namespace Test
 
             var check = _systemUnderTest.FetchById(maxId);
             Assert.IsNull(check);
+        }     
+        
+        [Test]
+        public void should_delete_line_item_from_last_order()
+        {
+            int maxId = _systemUnderTest.MaxId();
+            
+    
+
+            var check = _systemUnderTest.FetchById(maxId);
+            int count = check.LineItems.Count;
+            check.LineItems.RemoveAt(0);
+            _systemUnderTest.SaveOrUpdate(check);
+
+
+            Assert.AreEqual(count -1, check.LineItems.Count);
         }
 
         [Test]

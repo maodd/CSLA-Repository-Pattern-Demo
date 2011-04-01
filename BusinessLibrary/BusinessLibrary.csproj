@@ -75,8 +75,6 @@
     <Compile Include="IoC.cs" />
     <Compile Include="ObjectFactories\OrderFactory2.cs" />
     <Compile Include="ObjectFactories\LineItemFactory.cs" />
-    <Compile Include="TweekedCsla\LineItem.cs" />
-    <Compile Include="TweekedCsla\LineItems.cs" />
     <Compile Include="TweekedCsla\Order.cs" />
     <Compile Include="LineItem.cs" />
     <Compile Include="LineItems.cs" />
