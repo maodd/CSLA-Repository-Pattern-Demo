@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLibrary;
+using Csla.Core;
+using Order = BusinessLibrary.TweekedCsla.Order;
 
 namespace WindowsUI
 {
@@ -31,10 +33,14 @@ namespace WindowsUI
       /// <param name="e"></param>
     private void SaveButton_Click(object sender, EventArgs e)
     {
-        var dataSource = this.orderBindingSource.DataSource;
+//        var dataSource = this.orderBindingSource.DataSource;
+//
+//         Second time save fail, how to refresh datasource? or just close the form and reload it?
+//        var savedOrder = ((ISavable)dataSource).Save();
+//          this.orderBindingSource.DataSource = savedOrder;
+//          this.cslaActionExtender1.ResetActionBehaviors(savedOrder);
 
-        // Second time save fail, how to refresh datasource? or just close the form and reload it?
-        this.orderBindingSource.DataSource = ((BusinessLibrary.TweekedCsla.Order)dataSource).Save();
+        // TODO: how to catch save exception in CslaActionExtender?
     }
 
    

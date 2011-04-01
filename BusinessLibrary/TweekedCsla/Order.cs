@@ -1,5 +1,5 @@
 ﻿using System;
-using BusinessLibrary.Translaters;
+ 
 using Core.Models;
 using Csla;
 using Csla.Validation;
@@ -11,6 +11,7 @@ namespace BusinessLibrary.TweekedCsla
     /// Wrapper class created for inject IRepository and Translater/autoMapper into Csla Object
     /// </summary>
     [Serializable]
+    [Csla.Server.ObjectFactory("BusinessLibrary.ObjectFactories.OrderFactory2, BusinessLibrary")]
     public class Order : BusinessBase<Order>
     {
         public static PropertyInfo<int> IdProperty = RegisterProperty(new PropertyInfo<int>("Id", "Id"));
@@ -57,11 +58,9 @@ namespace BusinessLibrary.TweekedCsla
         {
             ValidationRules.AddRule(CommonRules.StringRequired, CustomerNameProperty);
         }
+ 
 
-        // Removed for easise unit test
-//        protected Order()
-//        { /* require use of factory methods */ }
-
+        [RunLocal]
         public static Order NewOrder()
         {
             return DataPortal.Create<Order>();
@@ -75,77 +74,18 @@ namespace BusinessLibrary.TweekedCsla
         {
             return OrderRepository.MaxId();
         }
-
-
-        public override void Delete()
-        {
-            OrderRepository.Delete(OrderRepository.FetchById(Id));
-
-            return;
-        }
-
-        public override Order Save()
-        {
-            OrderModel orderToSave;
-            if (Id > 0)
-            {
-                orderToSave = OrderRepository.FetchById(Id);
-                // todo: deleting all existing line items?
-            }
-            else
-            {
-                orderToSave = new OrderModel();
-            }
-
- 
-            orderToSave.CustomerName = CustomerName;
-
-            foreach (BusinessLibrary.LineItem lineItem in LineItems)
-            {
-                orderToSave.AddLineItem(new LineItemModel
-                                            {
-                                                Id = lineItem.Id,
-                                                Name = lineItem.Name,
-                                                Order = orderToSave
-                                            });
-            }
-
-            OrderRepository.SaveOrUpdate(orderToSave);
-
-//            Id = orderToSave.Id;
-            SetProperty(IdProperty, orderToSave.Id);
-            int i = 0;
-            foreach (var lineItem in LineItems)
-            {
-                lineItem.Id = orderToSave.LineItems[i].Id;
-                lineItem.ApplyEdit();
-                i++;
-            }
-
-            ApplyEdit(); // for list
-            ApplyEdit(); // for itself
-            MarkClean();
-            MarkOld();
-            return this;
-//            return base.Save();
-        }
-
-        /// <summary>
-        /// Fectch NHibernate object from repository
-        /// Translate to csla object using AutoMapper
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+  
         public static Order FetchById(int id)
         {
-            OrderModel result = OrderRepository.FetchById(id);
-
-            return Translater.From(result);
+            return (Order)DataPortal.Fetch(new SingleCriteria<Order, int>(id));
         }
 
         public static void DeleteById(int id)
         {
-            OrderRepository.DeleteById(id);
+            DataPortal.Delete(new SingleCriteria<Order, int>(id));
         }
+
+        
+        
     }
 }

@@ -51,9 +51,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\lib\AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="Csla">
       <HintPath>..\lib\Csla.dll</HintPath>
     </Reference>
@@ -76,15 +73,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IoC.cs" />
+    <Compile Include="ObjectFactories\OrderFactory2.cs" />
     <Compile Include="ObjectFactories\LineItemFactory.cs" />
     <Compile Include="TweekedCsla\LineItem.cs" />
+    <Compile Include="TweekedCsla\LineItems.cs" />
     <Compile Include="TweekedCsla\Order.cs" />
     <Compile Include="LineItem.cs" />
     <Compile Include="LineItems.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="ObjectFactories\OrderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Translaters\Translater.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

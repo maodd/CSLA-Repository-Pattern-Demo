@@ -67,7 +67,7 @@ namespace Test
         }
 
         [Test]
-        public void should_update_exisitn_order()
+        public void should_update_existing_order()
         {
             int maxId = _systemUnderTest.MaxId();
             var order = _systemUnderTest.FetchById(maxId);
