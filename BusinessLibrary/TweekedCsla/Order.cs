@@ -42,6 +42,11 @@ namespace BusinessLibrary.TweekedCsla
                     LoadProperty(LineItemsProperty, LineItems.NewList());
                 return GetProperty(LineItemsProperty);
             }
+
+            set
+            {
+                SetProperty(LineItemsProperty, value);
+            }
         }
 
         protected override void AddBusinessRules()

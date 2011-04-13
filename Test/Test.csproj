@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IntegrationTests\OrderRepositroySpecs.cs" />
+    <Compile Include="UnitTests\TranslatorSpecs.cs" />
     <Compile Include="UnitTests\OrderNhibernateMappingTest.cs" />
     <Compile Include="UnitTests\InMemoryDatabaseTestFixture.cs" />
     <Compile Include="UnitTests\CslaRepositoryPattenDemo.cs" />

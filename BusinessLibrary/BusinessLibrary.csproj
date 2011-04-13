@@ -51,6 +51,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.1.0.188, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Csla">
       <HintPath>..\lib\Csla.dll</HintPath>
     </Reference>
@@ -72,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrderTranslator.cs" />
     <Compile Include="IoC.cs" />
     <Compile Include="ObjectFactories\OrderFactory2.cs" />
     <Compile Include="ObjectFactories\LineItemFactory.cs" />
