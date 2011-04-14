@@ -11,7 +11,11 @@ namespace BusinessLibrary
     {
         public OrderTranslator()
         {
-            Mapper.CreateMap<OrderModel, BusinessLibrary.TweekedCsla.Order>();
+            Mapper.CreateMap<OrderModel, BusinessLibrary.TweekedCsla.Order>()
+//                .ForMember(dest => dest.BrokenRulesCollection, opt => opt.Ignore())
+//                .BeforeMap((s,d) => { d.BypassPropertyChecksMappingStart();
+                 
+                ;
             Mapper.CreateMap<LineItemModel, LineItem>();
         }
 
