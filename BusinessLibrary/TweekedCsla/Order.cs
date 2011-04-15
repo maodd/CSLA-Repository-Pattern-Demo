@@ -1,5 +1,5 @@
 ﻿using System;
- 
+using System.Reflection;
 using Core.Models;
 using Csla;
 using Csla.Validation;
@@ -70,5 +70,14 @@ namespace BusinessLibrary.TweekedCsla
             DataPortal.Delete(new SingleCriteria<Order, int>(id));
         }
 
+ 
+
     }
+
+     
+
+ 
+
+ 
+
 }

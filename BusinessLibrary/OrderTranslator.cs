@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AutoMapper;
+using BusinessLibrary.TweekedCsla;
 using Core.Models;
 
 namespace BusinessLibrary
@@ -12,16 +13,20 @@ namespace BusinessLibrary
         public OrderTranslator()
         {
             Mapper.CreateMap<OrderModel, BusinessLibrary.TweekedCsla.Order>()
-//                .ForMember(dest => dest.BrokenRulesCollection, opt => opt.Ignore())
-//                .BeforeMap((s,d) => { d.BypassPropertyChecksMappingStart();
-                 
+                 .AfterMap((s, d) =>
+                 {
+                     d.MarkOld();
+                 })
                 ;
-            Mapper.CreateMap<LineItemModel, LineItem>();
+            Mapper.CreateMap<LineItemModel, LineItem>().AfterMap((s, d) =>
+                 {
+                     d.MarkOld();
+                 });
         }
 
-        public TweekedCsla.Order From(OrderModel orderModel)
+        public TweekedCsla.Order From(object orderModel)
         {
-            return Mapper.Map<OrderModel, TweekedCsla.Order>(orderModel);
+            return Mapper.Map<OrderModel, TweekedCsla.Order>((OrderModel) orderModel);
         }
     }
 }

@@ -24,10 +24,10 @@ namespace Test.UnitTests
             Assert.Greater(result.LineItems.Count, 0);
             Assert.AreEqual(result.LineItems[0].Name, "Linteitme1");
 
-            // Those flags messed up,
-            // Kevin got a solution here: http://frankmao.com/2011/04/01/my-2-cents-about-new-csla/#comment-881
-            // But I couldn't find his Csla.Extensions.IEditableBusinessObjectForMapping
-            Assert.IsFalse(result.IsDirty);
+            
+            // Kevin got another solution here: http://frankmao.com/2011/04/01/my-2-cents-about-new-csla/#comment-881
+            // I just created a MarkOld method to do the similar thing.
+            Assert.IsFalse(result.IsDirty, "Dirty flag is messed up.");
             Assert.IsFalse(result.IsNew);
             Assert.IsTrue(result.IsValid);
 
