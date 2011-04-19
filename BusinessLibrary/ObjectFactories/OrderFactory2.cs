@@ -31,39 +31,44 @@ namespace BusinessLibrary.ObjectFactories
 
         public TweekedCsla.Order Fetch(SingleCriteria<TweekedCsla.Order, int> criteria)
         {
-            TweekedCsla.Order obj = TweekedCsla.Order.NewOrder();
-            MarkOld(obj);
+            // Using AutoMapper
+            return new OrderTranslator().From(OrderRepository.FetchById(criteria.Value));
 
-            OrderModel data = OrderRepository.FetchById(criteria.Value);
+            // Without automapper. 
 
-            using (BypassPropertyChecks(obj))
-            {
-                LoadProperty(obj, TweekedCsla.Order.IdProperty, data.Id);
+//            TweekedCsla.Order obj = TweekedCsla.Order.NewOrder();
+//            MarkOld(obj);
+//
+//            OrderModel data = OrderRepository.FetchById(criteria.Value);
 
-                obj.CustomerName = data.CustomerName;
+//            using (BypassPropertyChecks(obj))
+//            {
+//                LoadProperty(obj, TweekedCsla.Order.IdProperty, data.Id);
+//
+//                obj.CustomerName = data.CustomerName;
+//
+//                LineItems list = LineItems.NewList();
+//                foreach (LineItemModel item in data.LineItems)
+//                {
+//                    LineItem current = LineItem.NewItem();
+//                    MarkOld(current);
+//            
+//                    
+//                    using (BypassPropertyChecks(current))
+//                    {
+//                        LoadProperty(current, LineItem.IdProperty, item.Id);
+//                        LoadProperty(current, LineItem.NameProperty, item.Name);
+//                    }
+//                    
+//                    CheckRules(current);
+//                    list.Add(current);
+//                }
+//
+//                LoadProperty(obj, TweekedCsla.Order.LineItemsProperty, list);
+//            }
 
-                LineItems list = LineItems.NewList();
-                foreach (LineItemModel item in data.LineItems)
-                {
-                    LineItem current = LineItem.NewItem();
-                    MarkOld(current);
-            
-                    
-                    using (BypassPropertyChecks(current))
-                    {
-                        LoadProperty(current, LineItem.IdProperty, item.Id);
-                        LoadProperty(current, LineItem.NameProperty, item.Name);
-                    }
-                    
-                    CheckRules(current);
-                    list.Add(current);
-                }
-
-                LoadProperty(obj, TweekedCsla.Order.LineItemsProperty, list);
-            }
-
-            CheckRules(obj);
-            return obj;
+//            CheckRules(obj);
+//            return obj;
         }
 
         public TweekedCsla.Order Update(TweekedCsla.Order obj)
